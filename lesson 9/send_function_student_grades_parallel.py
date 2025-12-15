@@ -23,6 +23,14 @@ class GradesState(TypedDict):
     calculate_results: List[str]
 
 
+# Important to understand the "calculate_results" of OverallState and "calculate_results" of GradesState are linked
+# 1- Because they share the same key name: calculate_results
+# 2- OverallState.calculate_results has a reducer (Annotated[..., add])
+# 3- Each Send branch returns a partial state with that key
+# The LangGraph runtime logic make it happen
+# This is what it does ["Musta passed"] + ["Badr failed"] + ["Sami passed"]
+
+
 def get_students_grade_from_db(state: OverallState):
     print("Executing 'get_students_grade_from_db' node...")
     class_name = state["class_name"]
@@ -31,7 +39,7 @@ def get_students_grade_from_db(state: OverallState):
     students: List[Student] = [
         {"name": "Musta", "score": 70},
         {"name": "Badr", "score": 20},
-        {"name": "Samu", "score": 50},
+        {"name": "Sami", "score": 50},
         {"name": "Lina", "score": 95},
         {"name": "Omar", "score": 10},
     ]
