@@ -27,6 +27,7 @@ python graph_api.py
 8. **Context & Runtime** - Runtime context and configuration
 9. **Send Function** - Parallel execution and fan-out patterns
 10. **Retry Policy** - Error handling and retry strategies
+11. **Tools** - Tool calling with ToolNode and routing
 
 ## Quick Example
 
