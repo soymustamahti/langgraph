@@ -71,6 +71,8 @@ while True:
         print(msg)
         human = input(f"\n{msg}: ")
 
+        # In this example the resume will start from the beginning of the node
+        # so you will see the print "Entered 'a' node"
         human_response = Command(resume=human)
         result = graph.invoke(human_response, config)
 
