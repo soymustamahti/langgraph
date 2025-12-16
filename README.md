@@ -1,6 +1,6 @@
 # LangGraph Learning Project
 
-10 progressive lessons for learning LangGraph fundamentals through hands-on examples.
+12 progressive lessons for learning LangGraph fundamentals through hands-on examples.
 
 ## Setup
 
@@ -28,6 +28,7 @@ python graph_api.py
 9. **Send Function** - Parallel execution and fan-out patterns
 10. **Retry Policy** - Error handling and retry strategies
 11. **Tools** - Tool calling with ToolNode and routing
+12. **Checkpointing** - Persist state with InMemorySaver
 
 ## Quick Example
 
