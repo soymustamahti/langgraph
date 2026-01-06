@@ -1,6 +1,6 @@
 # LangGraph Learning Project
 
-13 progressive lessons for learning LangGraph fundamentals through hands-on examples.
+14 progressive lessons for learning LangGraph fundamentals through hands-on examples.
 
 ## Setup
 
@@ -66,6 +66,7 @@ python graph_api.py
 11. **Tools** - Tool calling with ToolNode and routing
 12. **Checkpointing** - Persist state with InMemorySaver
 13. **Interrupt** - Pausing and resuming graph execution, human-in-the-loop
+14. **React** - Implementing the ReAct pattern in LangGraph
 
 ## Quick Example
 
