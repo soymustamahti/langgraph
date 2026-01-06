@@ -1,12 +1,48 @@
 # LangGraph Learning Project
 
-12 progressive lessons for learning LangGraph fundamentals through hands-on examples.
+13 progressive lessons for learning LangGraph fundamentals through hands-on examples.
 
 ## Setup
+
+### 1. Create a Virtual Environment
+
+It's recommended to use a virtual environment to keep dependencies isolated:
+
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+- On macOS/Linux:
+  ```bash
+  source venv/bin/activate
+  ```
+- On Windows:
+  ```bash
+  venv\Scripts\activate
+  ```
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory by copying the example file:
+
+```bash
+cp .env.example .env
+```
+
+Then edit the `.env` file and add your OpenAI API key:
+
+```
+OPENAI_API_KEY="sk-your-actual-api-key-here"
+```
+
+**Note:** You can obtain an API key from [OpenAI's platform](https://platform.openai.com/api-keys).
 
 ## Running Lessons
 
