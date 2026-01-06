@@ -29,6 +29,7 @@ python graph_api.py
 10. **Retry Policy** - Error handling and retry strategies
 11. **Tools** - Tool calling with ToolNode and routing
 12. **Checkpointing** - Persist state with InMemorySaver
+13. **Interrupt** - Pausing and resuming graph execution, human-in-the-loop
 
 ## Quick Example
 
