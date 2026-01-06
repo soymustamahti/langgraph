@@ -4,9 +4,9 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.types import Command
 from langgraph.checkpoint.memory import InMemorySaver
 
-# When the file execution ends the memory do not persiste that why you
-# may want to use a postgresql or sqlitte memory storage...
-# This works better in jupiter file
+# When the file execution ends the memory does not persist that is why you
+# may want to use a postgresql or sqlite memory storage...
+# This works better in Jupyter file
 memory = InMemorySaver()
 config = {"configurable": {"thread_id": "1"}}
 

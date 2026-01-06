@@ -97,7 +97,7 @@ HumanMessage(content='Step B Completed', {more_data})],'step_count': 2, 'private
     """
 # Here you can see all the steps because we are using add_messages reducer which use HumanMessage class
 # because is for llms
-# ana we can see that our add_custom_reducer custom reducer worked
+# and we can see that our add_custom_reducer custom reducer worked
 
 
 # Using Pydantic

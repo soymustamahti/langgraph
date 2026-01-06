@@ -69,4 +69,4 @@ try:
     )
     print(f"\n✅ Final result: {result}")
 except Exception as e:
-    print(f"\n✶ All retry attempts exhausted: {e}")
+    print(f"\n❌ All retry attempts exhausted: {e}")

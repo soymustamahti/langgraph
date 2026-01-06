@@ -46,12 +46,12 @@ initial_state = {"input": "Start Process"}
 # all the variables need to have a default value
 # For example the "user_agent" dont have value in the MyGraphContext class
 # so if i dont set a value in the invoke is going to throw an error...
-# The variables in context are required fields, so eather you set them in the class of in the invoke
+# The variables in context are required fields, so either you set them in the class or in the invoke
 final_state = graph.invoke(
     input=initial_state,
     context={
         "user_agent": "Default-Platform",
-        # if set "db_connection" in the invoke is going to overwrit the db_connection of the class
+        # if set "db_connection" in the invoke is going to overwrite the db_connection of the class
         "db_connection": "postgres://new_user@remote_host: 5432/production",
     },
 )

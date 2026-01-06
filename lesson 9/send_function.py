@@ -15,7 +15,7 @@ class OverallState(TypedDict):
 # This is the state that will be operating in each "Send" instance
 class ResearchGate(TypedDict):
     subtopic: str
-    # i have it here because in the node that does the reserch for the subtopics im going to append the reserch result...
+    # i have it here because in the node that does the research for the subtopics im going to append the research result...
     research_results: List[str]
 
 
@@ -60,8 +60,8 @@ def compile_report(state: OverallState):
     return {"final_report": report}
 
 
-def continue_to_reserch(state: OverallState):
-    print("Runing 'continue_to_reserch'...")
+def continue_to_research(state: OverallState):
+    print("Runing 'continue_to_research'...")
 
     return [Send("research_subtopic", {"subtopic": s}) for s in state["subtopics"]]
 
@@ -73,7 +73,7 @@ builder.add_node(research_subtopic)
 builder.add_node(compile_report)
 
 builder.add_edge(START, "generate_subtopics")
-builder.add_conditional_edges("generate_subtopics", continue_to_reserch)
+builder.add_conditional_edges("generate_subtopics", continue_to_research)
 builder.add_edge("research_subtopic", "compile_report")
 builder.add_edge("compile_report", END)
 

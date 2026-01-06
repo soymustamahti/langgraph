@@ -64,7 +64,7 @@ initial_state = {
     # "input": "You will have to go to the C node! go_to_c"
 }
 
-finale_state = agent.invoke(initial_state)
+final_state = agent.invoke(initial_state)
 
 print("Final State and path execution")
-print(finale_state)
+print(final_state)

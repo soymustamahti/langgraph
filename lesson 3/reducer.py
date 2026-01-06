@@ -22,7 +22,7 @@ def custom_count_reducer(current: int, new: int) -> int:
     return current + new
 
 
-# The custom reducer can be complex or just simple, here im foing somthing complex...
+# The custom reducer can be complex or just simple, here im doing something complex...
 def custom_animal_reducer(current: list[str], new: list[str]) -> list[str]:
     for animal in new:
         current.append(animal)
@@ -78,7 +78,7 @@ run_example(
 # Initial State: {'count': 5, 'animals': ['lion', 'buffalo']}
 # Final State: {'count': 1, 'animals': ['dog']}
 # This is because since im not using a reducer it used the default one
-# And the fefault one it overwrites the state variables...
+# And the default one it overwrites the state variables...
 
 # Run with Reducer
 print("\nRun with Reducer")
@@ -95,7 +95,7 @@ run_example(
 # This is because is using the custom reducer that append the animals list and increments the count
 
 
-# Insted of using the custom_animal_reducer we can import and use libs that use pure functions to do so
+# Instead of using the custom_animal_reducer we can import and use libs that use pure functions to do so
 # We can use the lib "operator" with the add function to do it...
 print("\nRun with Reducer and operator lib")
 

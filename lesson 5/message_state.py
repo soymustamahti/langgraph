@@ -11,7 +11,7 @@ class MyGraphState(MessagesState):
 
 def user_node(state: MyGraphState) -> dict:
     print("---Execute User Node...")
-    return {"messages": HumanMessage(content="What is the whether today ?")}
+    return {"messages": HumanMessage(content="What is the weather today ?")}
 
 
 def ai_node(state: MyGraphState) -> dict:
@@ -21,7 +21,7 @@ def ai_node(state: MyGraphState) -> dict:
 
     response_content = (
         f"Im aware of your message '{last_message}'. "
-        "But im not a real AI so i can not tell you what the wether is, "
+        "But im not a real AI so i can not tell you what the weather is, "
         "but at least the code works !!"
     )
 
@@ -32,22 +32,22 @@ def turn_cound_node(state: MyGraphState):
     return {"turn_count": state["turn_count"] + 1}
 
 
-graphe = StateGraph(MyGraphState)
+graph = StateGraph(MyGraphState)
 
-graphe.add_node(user_node)
+graph.add_node(user_node)
 graphe.add_node(ai_node)
 graphe.add_node(turn_cound_node)
 
 graphe.add_edge(START, "user_node")
 graphe.add_edge("user_node", "ai_node")
 graphe.add_edge("ai_node", "turn_cound_node")
-graphe.add_edge("turn_cound_node", END)
+graph.add_edge(\"turn_cound_node\", END)
 
-agent = graphe.compile()
+agent = graph.compile()
 
-inital_state = {"messages": [], "turn_count": 0}
+initial_state = {\"messages\": [], \"turn_count\": 0}
 
-final_state = agent.invoke(inital_state)
+final_state = agent.invoke(initial_state)
 
 print("-----Final State Graph------")
 print(final_state)

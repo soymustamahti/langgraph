@@ -30,16 +30,16 @@ graph.add_edge(START, "say_hello")
 graph.add_edge("say_hello", "say_world")
 graph.add_edge("say_world", END)
 
-# 4. Compline Graphe
+# 4. Compile Graph
 agent = graph.compile()
 
 # 5. Preview the graph (you need to install "grandalf" lib for this)
 print(agent.get_graph().draw_ascii())
 
-# 6. Run Graphg
-initial_starte = {"message": []}
+# 6. Run Graph
+initial_state = {"messages": []}
 
-final_state = agent.invoke(initial_starte)
+final_state = agent.invoke(initial_state)
 
-print("Final start")
+print("Final state")
 print(final_state)
